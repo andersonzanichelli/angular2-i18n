@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+		<trans-unit id="af2ccf4b5dba59616e92cf1531505af02da8f6d2" datatype="html">
+			<source>Hello i18n!</source>
+			<target>Hello i18n!</target>
+		</trans-unit>
+		<trans-unit id="35ab5d6121ecbe0decdda638571a5a55ac77d5c4" datatype="html">
+			<source>This is a small example</source>
+			<target>This is a small example</target>
+		</trans-unit>
+    </body>
+  </file>
+</xliff>
