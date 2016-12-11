@@ -1,4 +1,4 @@
-import { Component, NgZone } from '@angular/core';
+import { Component } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { getTranslationProviders } from './i18n-providers';
@@ -11,18 +11,18 @@ import { AppModule } from './app.module';
 export class AppComponent  {
 	locale:string = "en";
 
-	constructor(private ngZone: NgZone) {
+	constructor() {
     }
 
 	changeLocale() {
 		document.locale = this.locale;
-
-		this.ngZone.run(() => { 
+		try {
 			getTranslationProviders().then(providers => {
-				const options = { providers };
-				platformBrowserDynamic().bootstrapModule(AppModule, options);
+				platformBrowserDynamic().bootstrapModule(AppModule, { providers });
 			});
-		});
+		} catch(e) {
+			console.log(e);
+		}
 	}
 
 	pt_BR() {
